@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บริการขายฝาก จำนอง บ้านและที่ดิน - อนุมัติไว เชื่อถือได้ | PropertyFlow</title>
+    <meta name="description" content="PropertyFlow แพลตฟอร์มให้บริการขายฝากและจำนองอสังหาริมทรัพย์ทุกประเภทในประเทศไทย ให้วงเงินสูง ดอกเบี้ยตามกฎหมาย อนุมัติไว ปลอดภัย และมีผู้เชี่ยวชาญให้คำปรึกษาฟรี">
+    <meta name="keywords" content="ขายฝาก, จำนอง, ขายฝากบ้าน, ขายฝากที่ดิน, จำนองบ้าน, จำนองที่ดิน, สินเชื่ออสังหา, เงินด่วน, ประเทศไทย">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Chosen Palette: Trustworthy Blue & Action Gold -->
+    <!-- Application Structure Plan: A user-centric, single-page funnel. It starts with a clear value proposition (Hero), educates the user by comparing core services (ขายฝาก vs จำนอง), builds trust (Why Us), demystifies the process (How it Works), showcases service breadth (Property Types), resolves doubts (FAQ), and concludes with a clear, low-friction call-to-action (Contact Form). This linear flow is ideal for SEO as it guides both users and crawlers through a complete narrative, from awareness to conversion, on a single, authoritative page. -->
+    <!-- Visualization & Content Choices: 
+    - Report Info: Core services (Kai Fak vs. Jumnong) -> Goal: Compare & Educate -> Presentation: Side-by-side feature cards -> Interaction: None, direct comparison -> Justification: Cards are highly scannable and allow for quick differentiation of key features like ownership transfer and interest rates, addressing a primary user question immediately. Method: HTML/Tailwind.
+    - Report Info: Service Process Steps -> Goal: Organize & Simplify -> Presentation: Numbered vertical list with icons -> Interaction: None -> Justification: A simple, numbered list is the clearest way to present a linear process. Icons add visual cues, making it easy to digest and building user confidence in the transparency of the service. Method: HTML/Tailwind.
+    - Report Info: User Queries -> Goal: Inform & SEO -> Presentation: FAQ Accordion -> Interaction: Click to expand/collapse -> Justification: An accordion saves space and reduces initial cognitive load. It's perfect for SEO, directly answering user search queries in a structured format that AI search engines can easily parse and feature as rich snippets. Method: Vanilla JS. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "PropertyFlow",
+      "serviceType": "MortgageLoan",
+      "provider": {
+        "@type": "Organization",
+        "name": "PropertyFlow"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "Thailand"
+      },
+      "description": "บริการขายฝากและจำนองอสังหาริมทรัพย์ในประเทศไทย ให้วงเงินสูง ดอกเบี้ยเป็นธรรมตามกฎหมาย พร้อมทีมงานผู้เชี่ยวชาญดูแลทุกขั้นตอน",
+      "url": "https://your-website-url.com"
+    }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #F9FAFB;
+            color: #111827;
+        }
+        .hero-bg {
+            background-color: #1E40AF;
+            background-image: linear-gradient(to right bottom, #1E40AF, #1D4ED8, #2563EB);
+        }
+        .btn-primary {
+            background-color: #FBBF24;
+            color: #111827;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #F59E0B;
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #ffffff;
+            font-weight: 500;
+            padding: 10px 30px;
+            border-radius: 8px;
+            border: 2px solid #ffffff;
+            transition: background-color 0.3s, color 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #ffffff;
+            color: #1E40AF;
+        }
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.1);
+        }
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: #1E40AF;
+            line-height: 1.2;
+        }
+        .section-subtitle {
+            font-size: 1.125rem;
+            color: #4B5563;
+            max-width: 700px;
+            margin: 0.5rem auto 0;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-[#1E40AF]">
+                Property<span class="text-[#2563EB]">Flow</span>
+            </a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#services" class="text-gray-600 hover:text-blue-700">บริการของเรา</a>
+                <a href="#process" class="text-gray-600 hover:text-blue-700">ขั้นตอน</a>
+                <a href="#faq" class="text-gray-600 hover:text-blue-700">คำถามที่พบบ่อย</a>
+                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition">ติดต่อเรา</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-2xl text-blue-800">☰</button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#services" class="block py-2 text-gray-600 hover:text-blue-700">บริการของเรา</a>
+            <a href="#process" class="block py-2 text-gray-600 hover:text-blue-700">ขั้นตอน</a>
+            <a href="#faq" class="block py-2 text-gray-600 hover:text-blue-700">คำถามที่พบบ่อย</a>
+            <a href="#contact" class="block mt-2 text-center bg-blue-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-blue-700 transition">ติดต่อเรา</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-bg text-white py-20 md:py-32">
+            <div class="container mx-auto text-center px-6">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight">ปลดล็อกสภาพคล่องทางการเงิน</h1>
+                <p class="mt-4 text-lg md:text-xl text-blue-100 max-w-3xl mx-auto">
+                    บริการขายฝากและจำนองอสังหาริมทรัพย์ที่โปร่งใส รวดเร็ว และเป็นธรรม ให้คุณเปลี่ยนทรัพย์สินเป็นเงินทุนได้อย่างมั่นใจ
+                </p>
+                <div class="mt-8 flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="btn-primary">ประเมินราคาฟรี</a>
+                    <a href="#services" class="btn-secondary">ดูบริการของเรา</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="section-title">เลือกบริการที่เหมาะกับคุณ</h2>
+                    <p class="section-subtitle">เรามี 2 บริการหลักเพื่อตอบสนองความต้องการทางการเงินของคุณ</p>
+                </div>
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <div class="card p-8 border-t-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-blue-800 mb-4">ขายฝาก</h3>
+                        <p class="text-gray-600 mb-4">เหมาะสำหรับผู้ที่ต้องการเงินทุนก้อนใหญ่และรวดเร็ว โดยโอนกรรมสิทธิ์ในทรัพย์สินให้ผู้รับซื้อฝากชั่วคราว พร้อมสิทธิ์ในการไถ่ถอนคืน</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> วงเงินสูง 40-70% ของราคาประเมิน</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> อนุมัติรวดเร็ว (ภายใน 1-3 วัน)</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> ไม่เช็กเครดิตบูโร</li>
+                            <li class="flex items-center"><span class="text-red-500 mr-2">✖</span> กรรมสิทธิ์ถูกโอนไปชั่วคราว</li>
+                        </ul>
+                    </div>
+                    <div class="card p-8 border-t-4 border-yellow-500">
+                        <h3 class="text-2xl font-semibold text-yellow-800 mb-4">จำนอง</h3>
+                        <p class="text-gray-600 mb-4">เหมาะสำหรับผู้ที่ต้องการเงินทุน โดยใช้โฉนดเป็นประกัน ไม่มีการโอนกรรมสิทธิ์ เหมาะกับการกู้ยืมระยะยาว</p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> กรรมสิทธิ์ยังเป็นของคุณ</li>
+                            <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> ดอกเบี้ยมักจะต่ำกว่า</li>
+                            <li class="flex items-center"><span class="text-red-500 mr-2">✖</span> วงเงินน้อยกว่า (10-30%)</li>
+                            <li class="flex items-center"><span class="text-red-500 mr-2">✖</span> ขั้นตอนซับซ้อนและใช้เวลานานกว่า</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="why-us" class="py-16 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">ทำไมต้องเลือก PropertyFlow?</h2>
+                <p class="section-subtitle">เรามุ่งมั่นให้บริการที่เป็นเลิศ ปลอดภัย และโปร่งใสในทุกขั้นตอน</p>
+                <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">⚡️</div>
+                        <h3 class="text-xl font-semibold mb-2">อนุมัติไว</h3>
+                        <p class="text-gray-600">ทราบผลเบื้องต้นไวใน 15 นาที ทำสัญญารับเงินได้ใน 1-3 วัน</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">⚖️</div>
+                        <h3 class="text-xl font-semibold mb-2">เป็นธรรม</h3>
+                        <p class="text-gray-600">ดอกเบี้ยและเงื่อนไขเป็นไปตามที่กฎหมายกำหนด ไม่เอาเปรียบ</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">🛡️</div>
+                        <h3 class="text-xl font-semibold mb-2">ปลอดภัย</h3>
+                        <p class="text-gray-600">ทำธุรกรรมต่อหน้าเจ้าหน้าที่ ณ สำนักงานที่ดินเท่านั้น</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl mb-4">👨‍💼</div>
+                        <h3 class="text-xl font-semibold mb-2">มีผู้เชี่ยวชาญ</h3>
+                        <p class="text-gray-600">ทีมงานพร้อมให้คำปรึกษาและดูแลคุณตลอดอายุสัญญา</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="process" class="py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">3 ขั้นตอนง่ายๆ</h2>
+                <p class="section-subtitle">กระบวนการของเราออกแบบมาให้เรียบง่ายและรวดเร็วที่สุด</p>
+                <div class="mt-16 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-100 text-blue-700 text-2xl font-bold w-16 h-16 rounded-full flex items-center justify-center mb-4">1</div>
+                        <h3 class="text-xl font-semibold mb-2">ยื่นเอกสาร</h3>
+                        <p class="text-gray-600">ส่งสำเนาโฉนดและรูปถ่ายทรัพย์สินผ่านช่องทางออนไลน์ เพื่อนัดประเมินราคา</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-100 text-blue-700 text-2xl font-bold w-16 h-16 rounded-full flex items-center justify-center mb-4">2</div>
+                        <h3 class="text-xl font-semibold mb-2">อนุมัติวงเงิน</h3>
+                        <p class="text-gray-600">ทีมงานแจ้งผลการประเมินและวงเงินสูงสุดที่สามารถทำได้ พร้อมสรุปเงื่อนไข</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <div class="bg-blue-100 text-blue-700 text-2xl font-bold w-16 h-16 rounded-full flex items-center justify-center mb-4">3</div>
+                        <h3 class="text-xl font-semibold mb-2">ทำสัญญาและรับเงิน</h3>
+                        <p class="text-gray-600">นัดหมายทำสัญญา ณ สำนักงานที่ดิน และรับเงินสดหรือเช็คได้ทันที</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="property-types" class="py-16 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">รับขายฝาก-จำนองอสังหาฯ ทุกประเภท</h2>
+                <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="card p-6 text-center">
+                        <div class="text-4xl mb-3">🏡</div>
+                        <p class="font-semibold">บ้านและทาวน์โฮม</p>
+                    </div>
+                    <div class="card p-6 text-center">
+                        <div class="text-4xl mb-3">🏢</div>
+                        <p class="font-semibold">คอนโดมิเนียม</p>
+                    </div>
+                    <div class="card p-6 text-center">
+                        <div class="text-4xl mb-3">🌳</div>
+                        <p class="font-semibold">ที่ดินเปล่า</p>
+                    </div>
+                    <div class="card p-6 text-center">
+                        <div class="text-4xl mb-3">🏭</div>
+                        <p class="font-semibold">โรงงานและโกดัง</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="py-16">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h2 class="section-title text-center">คำถามที่พบบ่อย</h2>
+                <div id="faq-container" class="mt-12 space-y-4">
+                    <div class="faq-item bg-white rounded-lg shadow-sm">
+                        <button class="faq-question w-full text-left p-5 flex justify-between items-center font-medium text-lg text-gray-800">
+                            <span>ใช้เอกสารอะไรบ้าง?</span>
+                            <span class="faq-icon text-xl text-blue-600 transform transition-transform">+</span>
+                        </button>
+                        <div class="faq-answer hidden p-5 pt-0 text-gray-600">
+                            <p>เบื้องต้นใช้เพียงสำเนาโฉนดหน้า-หลัง และรูปถ่ายทรัพย์สินปัจจุบัน สำหรับวันทำสัญญาจะต้องใช้โฉนดฉบับจริง, บัตรประชาชน และทะเบียนบ้านตัวจริงครับ</p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg shadow-sm">
+                        <button class="faq-question w-full text-left p-5 flex justify-between items-center font-medium text-lg text-gray-800">
+                            <span>ดอกเบี้ยเท่าไหร่?</span>
+                            <span class="faq-icon text-xl text-blue-600 transform transition-transform">+</span>
+                        </button>
+                        <div class="faq-answer hidden p-5 pt-0 text-gray-600">
+                            <p>ดอกเบี้ยเป็นไปตามที่กฎหมายกำหนดสูงสุดไม่เกิน 15% ต่อปี หรือ 1.25% ต่อเดือนครับ</p>
+                        </div>
+                    </div>
+                    <div class="faq-item bg-white rounded-lg shadow-sm">
+                        <button class="faq-question w-full text-left p-5 flex justify-between items-center font-medium text-lg text-gray-800">
+                            <span>ติดเครดิตบูโรทำได้ไหม?</span>
+                            <span class="faq-icon text-xl text-blue-600 transform transition-transform">+</span>
+                        </button>
+                        <div class="faq-answer hidden p-5 pt-0 text-gray-600">
+                            <p>สามารถทำได้ครับ การขายฝากและจำนองจะพิจารณาจากมูลค่าของหลักทรัพย์เป็นหลัก ไม่ได้ตรวจสอบประวัติเครดิตบูโรของผู้ทำสัญญา</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 bg-blue-50">
+             <div class="container mx-auto px-6">
+                <div class="text-center">
+                    <h2 class="section-title">ปรึกษาผู้เชี่ยวชาญของเราฟรี</h2>
+                    <p class="section-subtitle">กรอกข้อมูลเพื่อให้ทีมงานของเราติดต่อกลับโดยเร็วที่สุด</p>
+                </div>
+                <div class="mt-12 max-w-xl mx-auto card p-8">
+                    <form action="#" method="POST">
+                        <div class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700">ชื่อ-นามสกุล</label>
+                                <input type="text" name="name" id="name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-700">เบอร์โทรศัพท์</label>
+                                <input type="tel" name="phone" id="phone" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="line_id" class="block text-sm font-medium text-gray-700">Line ID (ถ้ามี)</label>
+                                <input type="text" name="line_id" id="line_id" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700">รายละเอียดทรัพย์สิน</label>
+                                <textarea name="message" id="message" rows="4" placeholder="เช่น ที่ดิน 1 ไร่ อ.เมืองเชียงใหม่" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full btn-primary justify-center">ส่งข้อมูล</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+             </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <a href="#" class="text-2xl font-bold">
+                Property<span class="text-blue-400">Flow</span>
+            </a>
+            <p class="mt-4 text-gray-400 max-w-md mx-auto">
+                เราคือผู้ช่วยทางการเงินที่เชื่อถือได้ พร้อมเปลี่ยนอสังหาริมทรัพย์ของคุณให้เป็นเงินทุน
+            </p>
+            <div class="mt-6 text-gray-400 text-sm">
+                &copy; 2025 PropertyFlow Thailand. สงวนลิขสิทธิ์.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            const faqContainer = document.getElementById('faq-container');
+            faqContainer.addEventListener('click', (e) => {
+                const questionButton = e.target.closest('.faq-question');
+                if (!questionButton) return;
+
+                const item = questionButton.parentElement;
+                const answer = item.querySelector('.faq-answer');
+                const icon = item.querySelector('.faq-icon');
+
+                const isOpening = answer.classList.contains('hidden');
+
+                faqContainer.querySelectorAll('.faq-answer').forEach(ans => ans.classList.add('hidden'));
+                faqContainer.querySelectorAll('.faq-icon').forEach(icn => {
+                    icn.textContent = '+';
+                    icn.classList.remove('rotate-45');
+                });
+                
+                if (isOpening) {
+                    answer.classList.remove('hidden');
+                    icon.textContent = '+';
+                    icon.classList.add('rotate-45');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
